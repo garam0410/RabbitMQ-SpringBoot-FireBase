@@ -4,3 +4,10 @@ spring:
     port: 5672
     username: guest
     password: guest
+    listener:
+      simple:
+        retry:
+          enabled: true
+          initial-interval: 2s
+          max-interval: 10s
+          max-attempts: 5
